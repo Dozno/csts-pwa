@@ -21,25 +21,34 @@
     height: 100vh; /* Full viewport height */
     padding: 20px;
     text-align: center;
+    width: 100%; /* Ensure the container takes full width */
   }
   
-  /* Responsive design for small screens */
+  /* Header styling */
   h1 {
     font-size: 2rem;
     color: #333;
     margin: 0;
-  }
-  
-  /* Ensure all images are responsive */
-  img {
+    text-align: center;
+    padding: 10px;
     max-width: 100%;
-    height: auto;
   }
   
-  /* Adjust font sizes and layout on smaller screens */
+  /* Responsive design for small screens */
   @media screen and (max-width: 600px) {
     h1 {
       font-size: 1.5rem; /* Smaller text on small screens */
     }
+    .container {
+      padding: 10px; /* Adjust padding for small screens */
+    }
+  }
+  
+  /* Responsive image styling */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
   
