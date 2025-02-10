@@ -2,10 +2,12 @@
     "name": "My PWA",
     "short_name": "PWA",
     "description": "A simple progressive web app",
-    "start_url": "www.csts.cz/",
+    "start_url": "https://dozno.github.io/csts-pwa/index.HTML",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#000000",
+    "homepage": "https://your-username.github.io/your-repo-name",
+
     "icons": [
         {
             "src": "icon.png",
