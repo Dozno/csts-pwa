@@ -1,20 +1,12 @@
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registered"))
-    .catch(error => console.log("Service Worker registration failed:", error));
-}
-
-let deferredPrompt;
-
-window.addEventListener("beforeinstallprompt", event => {
-    event.preventDefault();
-    deferredPrompt = event;
-    console.log("PWA Install Prompt available");
-
-    // Show a custom install button (optional)
-    document.body.innerHTML += '<button id="install">Install PWA</button>';
-    
-    document.getElementById("install").addEventListener("click", () => {
-        deferredPrompt.prompt();
-    });
-});
+// Example of a simple service worker registration script for PWA
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/service-worker.js')
+      .then((registration) => {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch((error) => {
+        console.log('Service Worker registration failed:', error);
+      });
+  }
+  
