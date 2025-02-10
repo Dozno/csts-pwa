@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My PWA</title>
-  <!-- Link to External Stylesheet (if you have one) -->
-  <link rel="stylesheet" href="styles.css">
-  <!-- Add the PWA icon -->
-  <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSTS PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if (navigator.serviceWorker) {
+            navigator.serviceWorker.register('service-worker.js');
+        }
+    </script>
+    <style>
+        /* Make the whole page take up the full viewport */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Make the iframe fill the entire screen */
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Welcome to My PWA!</h1>
-  </div>
-
-  <!-- Your existing scripts if any -->
-  <script src="app.js"></script>
+    <iframe src="https://csts.cz"></iframe>
 </body>
 </html>
